@@ -71,3 +71,7 @@ body {
 .fraction-inline .denominator {
     padding: 0 5px;
 }
+#controls button {
+    display: block;
+    margin: 10px auto; /* Centra el botón horizontalmente */
+}
