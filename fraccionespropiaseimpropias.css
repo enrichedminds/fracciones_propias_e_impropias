@@ -73,5 +73,5 @@ body {
 }
 #controls button {
     display: block;
-    margin: 10px auto; /* Centra el botón horizontalmente */
+    margin: 20px auto; /* Centra el botón horizontalmente */
 }
