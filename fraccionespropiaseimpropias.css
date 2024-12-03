@@ -29,6 +29,19 @@ body {
     margin-top: 20px;
 }
 
+#controls input#numerator {
+    margin-top: 10px; /* Espaciado adicional entre el input del denominador y numerador */
+}
+
+#controls select#division-type {
+    margin-top: 10px; /* Espaciado adicional entre el input del numerador y el dropdown */
+}
+
+#controls button {
+    display: block;
+    margin: 20px auto; /* Centra el botón horizontalmente */
+}
+
 #fraction-message {
     margin-top: 20px;
     font-size: 18px;
@@ -70,8 +83,4 @@ body {
 
 .fraction-inline .denominator {
     padding: 0 5px;
-}
-#controls button {
-    display: block;
-    margin: 20px auto; /* Centra el botón horizontalmente */
 }

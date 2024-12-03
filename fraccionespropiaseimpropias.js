@@ -24,7 +24,30 @@ function visualizeFraction() {
         return; // No dibujar nada si excede el límite
     }
 
-    // Dibujar hasta 6 rectángulos enteros
+    // Si la fracción es propia, solo muestra la fracción propia con detalles adicionales
+    if (numerator < denominator) {
+        const container = createRectangle(numerator, denominator, type);
+        visualization.appendChild(container);
+
+        const fractionMessage = document.getElementById('fraction-message');
+        fractionMessage.innerHTML = `
+            La fracción representada es 
+            <div class="fraction">
+                <div class="numerator">${numerator}</div>
+                <div class="denominator">${denominator}</div>
+            </div>
+            <br>
+            El rectángulo se representa por la fracción propia 
+            <span class="fraction-inline">
+                <div class="numerator">${numerator}</div>
+                <div class="denominator">${denominator}</div>
+            </span>
+            <br>
+            La fracción propia indica que el rectángulo está dividido en ${denominator} partes iguales, según el denominador, y se seleccionan ${numerator} de estas, según indica el numerador.`;
+        return;
+    }
+
+    // Dibujar hasta 6 rectángulos enteros para fracción impropia
     for (let i = 0; i < wholeParts; i++) {
         const container = createRectangle(denominator, denominator, type); // 1 entero
         visualization.appendChild(container);
@@ -36,7 +59,7 @@ function visualizeFraction() {
         visualization.appendChild(container);
     }
 
-    // Construir el mensaje principal si no excede el límite
+    // Construir el mensaje principal para fracción impropia
     const fractionMessage = document.getElementById('fraction-message');
     fractionMessage.innerHTML = `
         La fracción representada es 
