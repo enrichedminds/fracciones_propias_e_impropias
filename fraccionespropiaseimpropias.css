@@ -40,6 +40,17 @@ body {
 #controls button {
     display: block;
     margin: 20px auto; /* Centra el botón horizontalmente */
+    background-color: #5ea7bb; /* Fondo azul claro */
+    color: white; /* Texto en blanco */
+    border: 2px solid black; /* Borde negro */
+    padding: 5px 15px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#controls button:hover {
+    background-color: #4b94a7; /* Cambia el color al pasar el mouse */
 }
 
 #fraction-message {
